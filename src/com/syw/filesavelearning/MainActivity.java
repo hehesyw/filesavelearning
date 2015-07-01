@@ -18,8 +18,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
-
-
+/*
+ * 数据持久存储一共分为三种文件存储:文件存储、SharedPreference存储、数据库存储
+ * 本程序是文件存储，程序通过openFileOutput("data",Context.MODE_PRIVATE)
+ * 这里的文件名不包括路径，默认路径为data/data/<package name>/files/下，除此之外，还有追加模式MODE_APPEND
+ * 程序通过openFileOutput()、openFileInput()返回FileOuputStream、FileInputStrem对象，然后再利用Java流操作对文件进行读写操作。
+ */
 public class MainActivity extends Activity {
 	private EditText editText;
 
